@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Classifier</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section>
+           
+        <div class="box">
+            <div class="heading">
+                <h1><u>Image Classifier</u></h1>
+            </div>
+            <div></div>
+            
+            <p class="main">our goal is building image classifier.<br>
+                1.	Using this dataset for Facial expression:<br>
+                https://www.kaggle.com/datasets/samaneheslamifar/facial-emotion-expressions<br>
+                2.	The main goal is improving the average accuracy of classification.<br>
+                3.	Need to experiment with various parameters<br>
+                4.	Network topology<br>
+                i.	Number of neurons per layer<br>
+                ii.	number of layers<br>
+                iii.	shape of conv2d<br>
+                5.	While experimenting, need to record the performance such that you can create a bar chart of the performance<br>
+                </p>
+            
+               <h2 class="main"><b><u>Code</u></b></h2>
+               <img src="assignment1/c-1.PNG" alt="">
+               <img src="assignment1/c-2.PNG" alt="">
+               <img src="assignment1/c-3.PNG" alt="">
+               <img src="assignment1/c-4.PNG" alt="">
+               <img src="assignment1/c-5.PNG" alt="">
+               <img src="assignment1/c-6.PNG" alt="">
+               <img src="assignment1/c-7.PNG" alt="">
+               <img src="assignment1/c-8.PNG" alt="">
+               <p class="main">We need to perform the image classification using the pytorch
+                Initial I loaded my data using pytorch. Then I built cnn Model for image classifier.Then, I trained my train_data using cnn model for better understandment of the data and then applied on my validation_data for image classification. Where, I achieved a test accuracy of 25%
+           
+                         </p>
+               <h3 class="main">Model Tuning</h3>
+               <p class="main">Model tuning is the experimental process of finding the optimal values of the hyper parameters for maximizing the model performance. Hyperparameters are set of variables where whose values cannot be estimated by the model from training data. These values will control the training process. Here I improved my model performance by changing the number of neurons per layer, alpha, number of epochs. Where I achieved a test accuracy of 25.6%    </p>
+               <h3 class="main">Reference</h3>
+               <ol>
+                <li>Deep Learning with pytroch: zero to GANs</li>
+                <li>pytorch.org/tutorials/beginner/ptcheat.html</li>
+               </ol>
+                <p class="main">I have gone through to references to understand how to implement code using pytorch. Then I build my cnn model.<br>The main challenge, I was faced is finding the best hypermeters for model tuning to improve my model performance. Where, I tried building my model using various hypermeters parameters to get better accuracy score<br>I have attached the training and validation graphs of my model.</p>
+               <div class="main">
+                <a  href="assignment1/code.zip" download="code"><button>Image Classifier</button></a>
+            </div>
+
+        </div>
+
+        
+
+    </section>
+        
+    </body>
+</html>

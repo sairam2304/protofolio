@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Classifier</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section>
+           
+        <div class="box">
+            <div class="heading">
+                <h1><u>Image Classifier</u></h1>
+            </div>
+            <div></div>
+            
+            <p class="main">We will use the test data set of mango leaf disease
+            https://www.kaggle.com/datasets/aryashah2k/mango-leaf-disease-dataset
+            The Convolutional Neural Network (CNN) is a subtype of Neural Networks that is mainly used for
+            applications in image and speech recognition. Here I implementing the Convolutional Neural Network
+            using python. Here, I build an classifier for mango leaf diseases using CNN model.
+            CNN Model:
+            A convolutional neural network (CNN) is an subset of the machine learning. It is one of the various
+            types of artificial neural networks which are used for the different applications and data types. CNN is
+            a network architecture for the deep learning and it is specially used for image recognition and tasks
+            involved in processing the data pixel.
+                </p>
+                <img src="project/p1.PNG" alt="" srcset="">
+               <!-- <h2 class="main"><b><u>Naïve Bayes Algorithm:</u></b></h2> -->
+               <p class="main">CNN layers:
+                CNN consists of three layers: convolutional layer, pooling layer and fully connected layer. In every cnn
+                model it starts with the convolutional layer and ends with the fully connected layer. From the
+                convolutional layer to fully connected layer, the complexity of the CNN increases. It helps us to identify
+                the larger portions and complex features of an image until it identifies an object.
+                <br>Convolutional layer : It is an core building block of an CNN, the majority of computations occurred in
+                the convolutional layer. The process of an convolution involves a kernel or filter inside this layer. In this
+                layer image is converted into the numerical values, which allows the CNN model to interpet the image
+                and extract relevant patterns from it.
+                <br>Pooling layer:
+                It is similar to the Convolutional layer, It’s also sweeps an kernel or filter across the input image. But
+                here, the pooling layer reduces the parameters in the input and results in some information loss. But
+                this layer reduces the complexity and improve the efficiency of the CNN.
+                <br>Fully connected layer:
+                This is where image classification happens in the CNN model based on the extracted features from the
+                previous layers.
+                </p>
+                <h2 class="main"><b><u>Working principle of CNN Model::</u></b></h2>
+               <p class="main">A CNN can have the multiple layers, where each of them helps us to detect the different features of an
+                input image. A filter or kernel will be applied to each image to produce an output which helps to get
+                progressively better and more detailed after every layer.
+                At the each successive layer, the filters will increases its complexity to check and identify features that
+                will help us to represent the input object. The output of the each image from the every layer will
+                become the input to the next layer and the last layer, which is FC layer which helps the CNN to
+                recognizes the images or the object it represents.
+                The Applications of Convolutional neural network are Healthcare, Social media, Automotive, Facial
+                recognition</p>
+                
+                <h2 class="main">Import Libraries</h2>
+                <p class="main">The first step will be importing the libraries which are the basic libraries such as numpy, pandas, cv
+                    and os. These are the most important things for any machine learning model. </p>
+                <img src="project/p2.PNG" alt="">
+               <h2 class="main">Import dataset</h2>
+               <p class="main">We need to import the data set using the pathlib function. where it will helps us to load the data set.</p>
+                <img src="project/p3.PNG" alt="">
+                <h2 class="main">Exploratory data analysis</h2>
+                <p class="main">To better understand of the data. The dataset has been downloaded from kaggle which consists of
+                    approximately 4,000 images. Upon loading the data from the drive we learn that the data consists of
+                    8 classes</p>
+               <img src="project/p4.PNG" alt="">
+               <img src="project/p5.PNG" alt="">
+               <img src="project/p6.PNG" alt="">
+               <p class="main">Before building our model, we should make some changes to the dataset that would make it ready to
+                fit our model</p>
+               <img src="project/p7.PNG" alt="">
+               <img src="project/p8.PNG" alt="">
+               <h2 class="main">Encoding</h2>
+               <p class="main">Encoding is a process of converting the categorical data to numerical data. We use the LabelEncoder
+                method it help us to encode the categorical as numerical numbers. </p>
+               <img src="project/p9.PNG" alt="">
+               <img src="project/p10.PNG" alt="">
+               <h2 class="main">Model Building:</h2>
+               <p class="main">This model architecture is created to make use of pre-trained modules to extract single feature from
+                the input pictures. Which helps us to classify our images into the 8 classes.
+                <br>1. The first convolutional layer has 32 filters with the kernel size of 3x3 with equal padding. The
+                same padding has both the output tensor and input tensor have the same width and height
+                with activation function elu and then we perform the batch normalization
+                <br>2.Then we add the another convolutional layer with kernel size of 3x3 with equal padding and
+                activation function as elu
+                <br>3.The next step after the convolutional is pooling computation. The pooling computation will
+                reduce the extension of the data. We can use the module max_pooling2d with a size of 2x2
+                <br>4.Then we add another convolutional layer with filters 32,64, 128 and 256 with the same
+                padding and activation function as relu and then we similar as previous steps
+                <br>5.Then we add dense layer with the 1024 neurons and activation function as elu and then the
+                final layer with the 8 units. Which provides the probability distribution over the 8 classes</p>
+               <img src="project/p11.PNG" alt="">
+               <img src="project/p12.PNG" alt="">
+               <img src="project/p13.PNG" alt="">
+               <img src="project/p14.PNG" alt="">
+               <p class="main">After training our dataset, we got the train accuracy as 77% and the validation accuracy as 87%</p>
+               <img src="project/p15.PNG" alt="">
+               <img src="project/p16.PNG" alt="">
+               <img src="project/p17.PNG" alt="">
+               <img src="project/p18.PNG" alt="">
+               <h2 class="main">Model Tuning:</h2>
+               <p class="main">Model tuning is the experimental process of finding the optimal values of the hyper parameters for
+                maximizing the model performance. Hyperparameters are set of variables where whose values cannot
+                be estimated by the model from training data. These values will control the training process.</p>
+               <h2 class="main">Model Building:</h2>
+               <p class="main">The first convolutional layer has 32 filters with the kernel size of 3x3 with equal padding. The
+                same padding has both the output tensor and input tensor have the same width and height
+                with activation function elu and then we perform the batch normalization
+                <br>1. Then we add the another convolutional layer with kernel size of 3x3 with equal padding and
+                activation function as elu
+                <br>2. The next step after the convolutional is pooling computation. The pooling computation will
+                reduce the extension of the data. We can use the module max_pooling2d with a size of 2x2
+                <br>3. Then we add another convolutional layer with filters 64, 128 with the same padding and
+                activation function as elu and then we similar as previous steps
+                <br>4. Then we add dense layer with the 1024 neurons and activation function as relu and then the
+                final layer with the 8 units. Which provides the probability distribution over the 8 classes.</p>
+                <img src="project/p19.PNG" alt="">
+                <img src="project/p20.PNG" alt="">
+                <img src="project/p21.PNG" alt="">
+                <img src="project/p22.PNG" alt="">
+                <img src="project/p23.PNG" alt="">
+                <img src="project/p24.PNG" alt="">
+                <img src="project/p25.PNG" alt="">
+                <img src="project/p26.PNG" alt="">
+                <h2 class="main">References</h2>
+               <p class="main">1.https://towardsdatascience.com/feature-encoding-techniques-in-machine-learning-with-pythonimplementation-dbf933e64aa.
+                <br>2. https://www.javatpoint.com/training-of-cnn-in-tensorflow.</p>
+               <h2 class="main">My Contribution</h2>
+               <p class="main">
+                1.I have gone through to references to understand how to implement code using keras and sklearn
+                modules. Then, I build my cnn model.
+                <br>2.The main challenge, I was faced is finding the best hypermeters for model tuning to improve my
+                model performance. Where, I tried building my model using various hypermeters parameters to get
+                better accuracy score
+                <br>3.I have attached the training and validation graphs of my model.</p>
+                
+               <div class="main">
+                <a  href="project/code.zip" download="code"><button>Image Classifier</button></a>
+                <a href="https://www.youtube.com/watch?v=EDVrg6jllGg">Link to Video</a>
+            </div>
+
+        </div>
+
+        
+
+    </section>
+        
+    </body>
+</html>
